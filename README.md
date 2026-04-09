@@ -91,7 +91,6 @@ This is a basic academic project. Security features like prepared statements and
 
 ## 👨‍💻 Author
 
-**Tonmoy**
 Aspiring Web Developer 🚀
 
 ---
