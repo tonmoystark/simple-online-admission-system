@@ -1,0 +1,111 @@
+/* Custom properties for easy color management */
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #3700b3;
+    --accent-color: #03dac6;
+    --text-primary: #e1e1e1;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px; /* Responsive upper limit */
+    width: 95%;      /* Fluid on mobile */
+    margin: 40px auto;
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+/* Form Elements */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: #2c2c2c;
+    border: 1px solid var(--border-color);
+    color: white;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    width: 100%; /* Better for mobile touch targets */
+    padding: 12px 20px;
+    background: var(--accent-color);
+    color: #000; /* Dark text on bright accent */
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: #04f0d9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Tables & Responsive Data */
+.table-container {
+    overflow-x: auto; /* Adds horizontal scroll on tiny screens */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #252525;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #252525;
+}
+
+/* Desktop optimization */
+@media (min-width: 600px) {
+    button, .btn {
+        width: auto; /* Return to natural width on larger screens */
+    }
+}
